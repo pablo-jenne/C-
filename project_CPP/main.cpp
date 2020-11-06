@@ -170,6 +170,13 @@ void Logic()
     {
         gameover = true;
     }
+    for(int i = 0; i < ntail; i++)
+    {
+        if(tailx[i] == x && taily[i] == y)
+        {
+            gameover = true;
+        }
+    }
     if(x == fruitx && y == fruity)
     {
         score = score + 10;
