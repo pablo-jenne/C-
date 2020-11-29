@@ -16,7 +16,10 @@ using namespace std;
 
 class Draw {
     bool gameover;
-
+    bool snoepje1;
+    bool snoepje2;
+    bool snoepje3;
+    bool eerste_snoepje;
 
     int x,y,fruitx,fruity;
     unsigned int score = 0;
@@ -36,7 +39,13 @@ public:
 
 
     bool getGameover() const;
+    bool Snoepje1() const;
+    bool Snoepje2() const;
+    bool Snoepje3() const;
+    bool EERSTE_SNOEPJE() const;
 };
+
+
 
 
 

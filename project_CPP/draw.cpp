@@ -6,9 +6,37 @@ bool Draw::getGameover() const
     return gameover;
 }
 
+bool Draw::Snoepje1() const
+{
+    return snoepje1;
+}
+
+bool Draw::Snoepje2() const
+{
+    return snoepje2;
+}
+
+bool Draw::Snoepje3() const
+{
+    return  snoepje3;
+}
+
+bool Draw::EERSTE_SNOEPJE() const
+{
+    return eerste_snoepje;
+}
+
+
+
+
+
 void Draw :: setup()
 {
     gameover = false;
+    eerste_snoepje = true;
+    snoepje1 = false;
+    snoepje2 = false;
+    snoepje3 = false;
     dir = STOP;
     x = WIDTH/2;    // hier zal de snake starten
     y = HEIGHT/2;
@@ -23,15 +51,15 @@ void Draw :: setup()
 void Draw :: draw()
 {
     Font::clearScreen();
-    for(int i = 0; i<WIDTH+2; i++)
+    for(unsigned short i = 0; i<WIDTH+2; i++)
     {
         cout << "#";
     }
     cout<<endl;
 
-    for(int i = 0; i<HEIGHT; i++)
+    for(unsigned short i = 0; i<HEIGHT; i++)
     {
-        for(int j = 0; j<WIDTH; j++)
+        for(unsigned short j = 0; j<WIDTH; j++)
         {
             if(j==0)
             {
@@ -44,14 +72,29 @@ void Draw :: draw()
             }
             else if(i == fruity&& j == fruitx)
             {
+                if(snoepje1 == true || eerste_snoepje == true)
+                {
                 Font::setColor( 0x0A );
                 cout<<"F";
                 Font::setColor(0x0F);
+                }
+                if(snoepje2 == true)
+                {
+                Font::setColor( 0x0B );
+                cout<<"F";
+                Font::setColor(0x0F);
+                }
+                if(snoepje3 == true)
+                {
+                Font::setColor( 0x0E );
+                cout<<"F";
+                Font::setColor(0x0F);
+                }
             }
                 else
             {
                 bool print = false;
-                for(int k = 0; k< ntail; k++)
+                for(unsigned short k = 0; k< ntail; k++)
                 {
                     if(tailx[k] == j && taily[k] == i)
                     {
@@ -78,7 +121,7 @@ void Draw :: draw()
         cout<<endl;
     }
 
-    for(int i =0; i<HEIGHT+2; i++) // plus 2 doen anders wordt het raster niet goed getekend
+    for(unsigned short i =0; i<HEIGHT+2; i++) // plus 2 doen anders wordt het raster niet goed getekend
     {
         cout << "#";
     }
@@ -116,13 +159,13 @@ void Draw:: input()
 void Draw:: logic()
 {
 
-    int prevx = tailx[0];
-    int prevy = taily[0];
-    int prev2x, prev2y;
+    unsigned short prevx = tailx[0];
+    unsigned short prevy = taily[0];
+    unsigned short prev2x, prev2y;
     tailx[0] = x;
     taily[0] = y;
 
-    for(int i =1; i<ntail; i++) // i op 1 laten beginnen anders wordt de eerste tail niet goed getekend
+    for(unsigned short i =1; i<ntail; i++) // i op 1 laten beginnen anders wordt de eerste tail niet goed getekend
     {
         prev2x = tailx[i];
         prev2y = taily[i];
@@ -159,7 +202,7 @@ void Draw:: logic()
     {
         gameover = true;
     }
-    for(int i = 0; i < ntail; i++)
+    for(unsigned short i = 0; i < ntail; i++)
     {
         if(tailx[i] == x && taily[i] == y)
         {
@@ -168,10 +211,40 @@ void Draw:: logic()
     }
     if(x == fruitx && y == fruity)
     {
-        score = score + 10;
-        fruitx = rand() % WIDTH;
-        fruity = rand() % HEIGHT;
-        ntail++;
+        eerste_snoepje = false;
+        srand (time(NULL));
+         unsigned char random_getal = rand() % 3 + 1; // nummer tussen 1 en 3
+
+         switch(random_getal) {
+               case 1:
+                     score = score + 10;
+                     fruitx = rand() % WIDTH;
+                     fruity = rand() % HEIGHT;
+                     ntail++;
+                     snoepje1 = true;
+                     snoepje2 = false;
+                     snoepje3 = false;
+
+               case 2:
+                     score = score + 10;
+                     fruitx = rand() % WIDTH;
+                     fruity = rand() % HEIGHT;
+                     ntail--;
+                     snoepje1 = false;
+                     snoepje2 = true;
+                     snoepje3 = false;
+
+               case 3:
+                     score = score + 10;
+                     fruitx = rand() % WIDTH;
+                     fruity = rand() % HEIGHT;
+                     ntail = ntail + 2;
+                     snoepje1 = false;
+                     snoepje2 = false;
+                     snoepje3 = true;
+
+            }
+
     }
 
 }

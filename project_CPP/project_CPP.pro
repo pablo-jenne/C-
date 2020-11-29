@@ -9,6 +9,7 @@ CONFIG -= app_bundle
 
 SOURCES += \
         draw.cpp \
+        input.cpp \
         main.cpp
 
 # Default rules for deployment.
