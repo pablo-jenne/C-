@@ -7,6 +7,7 @@
 #include <time.h>
 #include <color.h>
 #include <conio.h>
+#include "variables.h"
 
 using namespace std;
 
@@ -26,9 +27,8 @@ class Draw {
     int tailx[100], taily[100];
     int ntail =0; // lengte van de body (snake)
 
-    enum  Direction{STOP = 0, LEFT, RIGHT, UP, DOWN};
+enum  Direction{STOP = 0, LEFT, RIGHT, UP, DOWN};
     Direction dir;
-
 
 public:
 

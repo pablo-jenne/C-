@@ -1,0 +1,4 @@
+#ifndef SNOEPJE_SINGLE_H
+#define SNOEPJE_SINGLE_H
+
+#endif // SNOEPJE_SINGLE_H

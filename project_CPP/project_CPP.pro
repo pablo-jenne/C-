@@ -10,6 +10,7 @@ CONFIG -= app_bundle
 SOURCES += \
         draw.cpp \
         input.cpp \
+        logic.cpp \
         main.cpp
 
 # Default rules for deployment.
@@ -18,6 +19,13 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
+    logic.h \
+    snoep.h \
+    snoepje_dubble.h \
+    snoepje_kut.h \
+    snoepje_single.h \
+    variables.h \
+     variables.h \
     color.h \
     draw.h \
     input.h
