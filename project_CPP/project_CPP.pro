@@ -9,9 +9,13 @@ CONFIG -= app_bundle
 
 SOURCES += \
         draw.cpp \
-        input.cpp \
-        logic.cpp \
-        main.cpp
+        game.cpp \
+        main.cpp \
+        snake.cpp \
+        snoep.cpp \
+        snoepje_dubble.cpp \
+        snoepje_kut.cpp \
+        snoepje_single.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -19,13 +23,11 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    logic.h \
+    game.h \
+    snake.h \
     snoep.h \
     snoepje_dubble.h \
     snoepje_kut.h \
     snoepje_single.h \
-    variables.h \
-     variables.h \
     color.h \
-    draw.h \
-    input.h
+    draw.h
