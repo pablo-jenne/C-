@@ -7,10 +7,13 @@
 class Snoepje_kut : public Snoep{
 public:
 
-bool snoepje2;
-bool Snoepje2() const;
-void eat();
-void draw();
+    Snoepje_kut(std::string naam)  :Snoep(naam){}
+    void snoep(unsigned short aantal);
+
+    bool snoepje2;
+    bool Snoepje2() const;
+    void eat();
+    void draw();
 
 };
 

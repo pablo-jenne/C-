@@ -1,15 +1,12 @@
 #include "snoepje_kut.h"
 
-score = score + 10;
-fruitx = rand() % WIDTH;
-fruity = rand() % HEIGHT;
-ntail--;
 
 
-
-if(snoepje2 == true)
+void Snoepje_kut::snoep(unsigned short aantal)
 {
-Font::setColor( 0x0B );
-cout<<"F";
-Font::setColor(0x0F);
+    srand (time(NULL));
+    aantal = rand() % 2 + 1; // nummer tussen 1 en 3
+
+        std::cout <<naam <<"whoaaaa me is really bad" << std::endl;
+
 }

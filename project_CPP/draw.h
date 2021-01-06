@@ -7,7 +7,6 @@
 #include <time.h>
 #include <color.h>
 #include <conio.h>
-#include "variables.h"
 
 using namespace std;
 

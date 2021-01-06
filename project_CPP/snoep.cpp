@@ -1,22 +1,31 @@
 #include "snoep.h"
+#include "snoepje_dubble.h"
+#include "snoepje_kut.h"
+#include "snoepje_single.h"
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+#include <color.h>
+#include <conio.h>
 
-int Snoep :: snoep()
-{
+void Snoep:: snoep(unsigned short aantal) {
+        Snoep * snoep = nullptr;
 
-     random_getal = rand() % 3 + 1; // nummer tussen 1 en 3
+        switch(rand()%3)
+        {
+        case 0:
+            snoep = new Snoepje_Dubble("");
+            break;
+        case 1:
+            snoep = new Snoepje_Single("");
+            break;
+        case 2:
+            snoep = new Snoepje_kut ("");
+            break;
+        default:
+            break;
+        }
 
-    if(random_getal == 1){
-        //oproepen van snoepjes functies
+        aantal = rand() % 2 + 1; // nummer tussen 1 en 2
 
-    }
-    else if(random_getal == 2){
-
-    }
-    else if (random_getal == 3){
-
-    }
-
-    return 0;
-
-}
-
+};

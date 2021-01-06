@@ -21,7 +21,7 @@ bool snoepje1 = true;
 bool snoepje2 = false;
 bool snoepje3 = false;
 
-int game( unsigned short *pointer_score = 0  );
+void game();
 
 
 };

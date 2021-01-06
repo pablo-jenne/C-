@@ -73,23 +73,23 @@ void Draw :: draw()
             else if(i == fruity&& j == fruitx)
             {
                 if(snoepje1 == true || eerste_snoepje == true)
-                {
-                Font::setColor( 0x0A );
-                cout<<"F";
-                Font::setColor(0x0F);
-                }
-                if(snoepje2 == true)
-                {
-                Font::setColor( 0x0B );
-                cout<<"F";
-                Font::setColor(0x0F);
-                }
-                if(snoepje3 == true)
-                {
-                Font::setColor( 0x0E );
-                cout<<"F";
-                Font::setColor(0x0F);
-                }
+                                {
+                                Font::setColor( 0x0A );
+                                cout<<"F";
+                                Font::setColor(0x0F);
+                                }
+                                if(snoepje2 == true)
+                                {
+                                Font::setColor( 0x0B );
+                                cout<<"F";
+                                Font::setColor(0x0F);
+                                }
+                                if(snoepje3 == true)
+                                {
+                                Font::setColor( 0x0E );
+                                cout<<"F";
+                                Font::setColor(0x0F);
+                                }
             }
                 else
             {

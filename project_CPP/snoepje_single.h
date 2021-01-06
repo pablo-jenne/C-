@@ -5,8 +5,11 @@
 class Snoepje_Single : public Snoep{
 public:
 
-bool snoepje1;
-bool Snoepje1() const;
+    Snoepje_Single(std::string naam)  :Snoep(naam){}
+    void snoep(unsigned short aantal);
+
+    bool snoepje1;
+    bool Snoepje1() const;
 
 };
 

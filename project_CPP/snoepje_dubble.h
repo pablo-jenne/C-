@@ -8,10 +8,13 @@
 class Snoepje_Dubble : public Snoep{
 public:
 
-bool snoepje3;
-bool Snoepje3() const;
-void eat();
-void draw();
+    Snoepje_Dubble(std::string naam)  :Snoep(naam){}
+    void snoep(unsigned short aantal);
+
+    bool snoepje3;
+    bool Snoepje3() const;
+    void eat(unsigned short aantal);
+    void draw(unsigned short aantal);
 
 };
 

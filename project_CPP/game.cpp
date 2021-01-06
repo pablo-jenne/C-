@@ -1,6 +1,6 @@
 #include "game.h"
 
-int Game :: game( &score )
+void Game :: game()
 {
 
     random_getal = rand() % 3 + 1; // nummer tussen 1 en 3
@@ -18,5 +18,5 @@ int Game :: game( &score )
          getal = 3;
 
     }
-    return getal;
+
 }
