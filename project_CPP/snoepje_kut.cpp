@@ -2,7 +2,7 @@
 
 
 
-void Snoepje_kut::snoep(unsigned short aantal)
+void Snoepje_kut::poly(unsigned short aantal)
 {
     srand (time(NULL));
     aantal = rand() % 2 + 1; // nummer tussen 1 en 3

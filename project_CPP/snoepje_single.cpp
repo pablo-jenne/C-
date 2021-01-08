@@ -1,6 +1,6 @@
 #include "snoepje_single.h"
 
-void Snoepje_Single::snoep(unsigned short aantal)
+void Snoepje_Single::poly(unsigned short aantal)
 {
     srand (time(NULL));
     aantal = rand() % 2 + 1; // nummer tussen 1 en 3

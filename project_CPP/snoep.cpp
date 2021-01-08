@@ -9,23 +9,27 @@
 #include <conio.h>
 
 void Snoep:: snoep(unsigned short aantal) {
-        Snoep * snoep = nullptr;
+        Snoep * snoepje = nullptr;
 
         switch(rand()%3)
         {
         case 0:
-            snoep = new Snoepje_Dubble("");
+            snoepje = new Snoepje_Single("He");
             break;
         case 1:
-            snoep = new Snoepje_Single("");
+            snoepje = new Snoepje_Dubble("He He");
             break;
         case 2:
-            snoep = new Snoepje_kut ("");
+            snoepje = new Snoepje_kut ("He He He");
             break;
         default:
             break;
         }
 
         aantal = rand() % 2 + 1; // nummer tussen 1 en 2
+
+        snoepje->snoep(aantal);
+
+
 
 };

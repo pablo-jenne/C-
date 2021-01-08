@@ -5,14 +5,15 @@
 #include <iostream>
 #include <stdlib.h>
 
-class Snoepje_Dubble : public Snoep{
+class Snoepje_Dubble : public Game{
 public:
 
-    Snoepje_Dubble(std::string naam)  :Snoep(naam){}
-    void snoep(unsigned short aantal);
+    Snoepje_Dubble(std::string naam)  :Game(naam){}
+    void poly(unsigned short aantal);
 
     bool snoepje3;
     bool Snoepje3() const;
+
     void eat(unsigned short aantal);
     void draw(unsigned short aantal);
 

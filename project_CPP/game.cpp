@@ -1,22 +1,27 @@
 #include "game.h"
 
-void Game :: game()
+void Game :: game(unsigned short aantal)
 {
 
-    random_getal = rand() % 3 + 1; // nummer tussen 1 en 3
+    Game * snoepje = nullptr;
 
-    if(random_getal == 1){
-
-         getal = 1;
-
+    switch(rand()%3)
+    {
+    case 0:
+        snoepje = new Snoepje_Single("He");
+        break;
+    case 1:
+        snoepje = new Snoepje_Dubble("He He");
+        break;
+    case 2:
+        snoepje = new Snoepje_kut("He He He");
+        break;
+    default:
+        break;
     }
-    else if(random_getal == 2){
-         getal = 2;
 
-    }
-    else if (random_getal == 3){
-         getal = 3;
+    aantal = rand() % 2 + 1; // nummer tussen 1 en 2
 
-    }
+    snoepje->poly(aantal);
 
 }

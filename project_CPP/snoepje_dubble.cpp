@@ -5,17 +5,6 @@ bool Snoepje_Dubble::Snoepje3() const
 {
     return  snoepje3;
 }
-void Snoepje_Dubble :: eat(unsigned short aantal)
-{
-    for (unsigned short i = 0; i < aantal; i++)
-    {
-//score = score + 10;
-fruitx = rand() % WIDTH;
-fruity = rand() % HEIGHT;
-//ntail = ntail + 2;
-    }
-
-}
 
 
 void Snoepje_Dubble :: draw(unsigned short aantal)
@@ -28,7 +17,7 @@ void Snoepje_Dubble :: draw(unsigned short aantal)
     }
 }
 
-void Snoepje_Dubble::snoep(unsigned short aantal)
+void Snoepje_Dubble::poly(unsigned short aantal)
 {
     for (unsigned short i = 0; i < aantal; i++)
     {
@@ -36,3 +25,4 @@ void Snoepje_Dubble::snoep(unsigned short aantal)
     }
 
 }
+

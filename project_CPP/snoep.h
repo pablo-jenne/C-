@@ -12,18 +12,19 @@ class Snoep : public Game {
 
 public:
 
-    Snoep(std::string naam)  :naam(naam){}
-    Snoep() {}
+   // Snoep(std::string naam)  :naam(naam){}
+   // Snoep() {}
 
-    virtual void snoep (unsigned short aantal) = 0;
+   // virtual void snoep (unsigned short aantal) = 0;
+    virtual ~Snoep(){
 
-    unsigned short int fruitx,fruity;
-    unsigned char random_getal; // ik zou hier een pointer van maken
+        //delete snoepje;
+    }
+
+  //  unsigned short int fruitx,fruity;
+
     void snoep();
     //Snoep();
-protected:
-    std::string naam;
-
 };
 
 
