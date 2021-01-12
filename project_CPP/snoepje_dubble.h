@@ -5,10 +5,10 @@
 #include <iostream>
 #include <stdlib.h>
 
-class Snoepje_Dubble : public Game{
+class Snoepje_Dubble : public Snoep{
 public:
 
-    Snoepje_Dubble(std::string naam)  :Game(naam){}
+    Snoepje_Dubble(std::string naam)  :Snoep(naam){}
     void poly(unsigned short aantal);
 
     bool snoepje3;

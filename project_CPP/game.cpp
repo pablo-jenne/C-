@@ -1,27 +1,34 @@
 #include "game.h"
+#include "snoep.h"
+#include "snoepje_dubble.h"
+#include "snoepje_kut.h"
+#include "snoepje_single.h"
 
-void Game :: game(unsigned short aantal)
+void Game :: poly_snoep() const
 {
-
-    Game * snoepje = nullptr;
+    unsigned short int aantal_snoepjes = 0;
+     aantal_snoepjes = rand()%3;
+    Snoep * snoepje = nullptr;
 
     switch(rand()%3)
     {
     case 0:
         snoepje = new Snoepje_Single("He");
+        snoepje->poly(aantal_snoepjes);
         break;
     case 1:
         snoepje = new Snoepje_Dubble("He He");
+        snoepje->poly(aantal_snoepjes);
         break;
     case 2:
         snoepje = new Snoepje_kut("He He He");
+        snoepje->poly(aantal_snoepjes);
         break;
     default:
         break;
     }
 
-    aantal = rand() % 2 + 1; // nummer tussen 1 en 2
 
-    snoepje->poly(aantal);
+    delete snoepje;
 
 }

@@ -1,6 +1,6 @@
 #include "snake.h"
 
-void Snake :: logic()
+void Snake :: logic(unsigned short ntail)
 {
     unsigned short prevx = tailx[0];
     unsigned short prevy = taily[0];

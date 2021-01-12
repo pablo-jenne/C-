@@ -8,23 +8,21 @@
 #include <string.h>
 using namespace std;
 
-class Snoep : public Game {
+class Snoep  {
 
 public:
 
-   // Snoep(std::string naam)  :naam(naam){}
-   // Snoep() {}
+    Snoep(std::string naam)  :naam(naam){}
+    virtual ~Snoep() {}
 
-   // virtual void snoep (unsigned short aantal) = 0;
-    virtual ~Snoep(){
+   virtual void poly (unsigned short aantal) = 0;
 
-        //delete snoepje;
-    }
 
-  //  unsigned short int fruitx,fruity;
-
-    void snoep();
+    //void snoep();
     //Snoep();
+
+protected:
+    std::string naam;
 };
 
 

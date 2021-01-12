@@ -4,9 +4,9 @@
 
 void Snoepje_kut::poly(unsigned short aantal)
 {
-    srand (time(NULL));
-    aantal = rand() % 2 + 1; // nummer tussen 1 en 3
-
-        std::cout <<naam <<"whoaaaa me is really bad" << std::endl;
+    for (unsigned short i = 0; i < aantal; i++)
+    {
+    std::cout <<naam <<"whoaaaa ik geef je 2x" << std::endl;
+    }
 
 }

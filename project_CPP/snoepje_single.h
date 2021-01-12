@@ -2,10 +2,10 @@
 #define SNOEPJE_SINGLE_H
 #include "snoep.h"
 
-class Snoepje_Single : public Game{
+class Snoepje_Single : public Snoep{
 public:
 
-    Snoepje_Single(std::string naam)  :Game(naam){}
+    Snoepje_Single(std::string naam)  :Snoep(naam){}
     void poly(unsigned short aantal);
 
     bool snoepje1;

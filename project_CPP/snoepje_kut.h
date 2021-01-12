@@ -4,10 +4,10 @@
 
 
 
-class Snoepje_kut : public Game{
+class Snoepje_kut : public Snoep{
 public:
 
-    Snoepje_kut(std::string naam)  :Game(naam){}
+    Snoepje_kut(std::string naam)  :Snoep(naam){}
     void poly(unsigned short aantal);
 
     bool snoepje2;
